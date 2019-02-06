@@ -19,3 +19,6 @@ def maintanance_histogram():
         else:
             mydict[item[12]] += 1
     print(mydict)
+
+func_tuple()
+maintanance_histogram()
