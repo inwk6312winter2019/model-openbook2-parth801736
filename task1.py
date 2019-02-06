@@ -59,7 +59,7 @@ def street_class():
             item_ = item_.replace(" ","")
             print(item[12])
 
-#func_tuple()
-#maintanance_histogram()
-#owner_list()
+func_tuple()
+maintanance_histogram()
+owner_list()
 street_class()
