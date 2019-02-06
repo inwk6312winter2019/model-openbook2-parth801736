@@ -20,5 +20,15 @@ def maintanance_histogram():
             mydict[item[12]] += 1
     print(mydict)
 
+def unique_owner():
+    owner_list = item[11]
+    new_owner_list = []
+    for item in fout:
+        item = item.split(",")
+        if item[11] not in new_owner_list:
+            new_owner_list.append(item[11])
+    print(new_owner_list)
+
 func_tuple()
 maintanance_histogram()
+unique_owner()
