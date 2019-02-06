@@ -34,6 +34,32 @@ def owner_list():
             owners.append(item)
     print(owners)
 
-func_tuple()
-maintanance_histogram()
-owner_list()
+# Different types of Street classes ["ST_CLASS"] and a list of streets undereach class
+def get_street_class():
+    str_class = []
+    fout = open("Street_Centrelines.csv","r")
+    for item in fout:
+        item = item.split(",")
+        item = item[10].strip()
+        item = item.replace(" ","")
+        if item not in str_class:
+            if len(item) >= 1:
+                str_class.append(item)
+    return str_class
+
+def street_class():
+    str_class = get_street_class()
+    print(str_class)
+    for street in str_class:
+        print(".",street)
+        for item in fout:
+            item = item.split(",")
+            item_ = item[10].strip()
+            item_ = item_.lower()
+            item_ = item_.replace(" ","")
+            print(item[12])
+
+#func_tuple()
+#maintanance_histogram()
+#owner_list()
+street_class()
