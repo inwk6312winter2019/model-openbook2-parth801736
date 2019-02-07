@@ -14,3 +14,13 @@ def bus_stop():
     for stre in street:
          if stre not in new_street:
              new_street.append(stre)
+              buss = []
+
+    for st in new_street:
+        for der in fout2:
+            new_der = der.split(",")
+            if new_der[7] == "Accessible":
+                h = new_der[6].strip()
+                h = h.lower()
+                if h.find(st) >= 0:
+                     buss.append(new_der[2])
