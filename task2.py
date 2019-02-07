@@ -14,7 +14,8 @@ def bus_stop():
     for stre in street:
          if stre not in new_street:
              new_street.append(stre)
-              buss = []
+
+    buss = []
 
     for st in new_street:
         for der in fout2:
@@ -24,3 +25,5 @@ def bus_stop():
                 h = h.lower()
                 if h.find(st) >= 0:
                      buss.append(new_der[2])
+
+bus_stop()                     
