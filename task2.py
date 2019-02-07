@@ -26,4 +26,11 @@ def bus_stop():
                 if h.find(st) >= 0:
                      buss.append(new_der[2])
 
+    print("Stop Number    |    Location    |    FCODE")
+    for bus in buss:
+        for new_re in open('Bus_Stops.csv', 'r'):
+            new_re = new_re.split(",")
+            if new_re[2].find(bus) >= 0:
+                print(new_re[4],"",new_re[6],"",new_re[10])
+
 bus_stop()                     
